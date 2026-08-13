@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت تجربیات | اشتراک گذاری دانسته‌ها</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>تجربیات ✨</h1>
+        <p>تجربه خود را با دیگران به اشتراک بگذار</p>
+        <nav>
+            <button onclick="showSection('home')">خانه</button>
+            <button onclick="showSection('add-post')">ارسال تجربه جدید</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- بخش خانه: لیست تجربیات -->
+        <section id="home">
+            <h2>آخرین تجربیات</h2>
+            <div id="posts-container">
+                <!-- تجربیات اینجا ظاهر می‌شوند -->
+                <div class="post-card">
+                    <h3>تجربه من از یادگیری برنامه‌نویسی با گوشی</h3>
+                    <p>یادگیری برنامه‌نویسی با موبایل سخت است اما غیرممکن نیست...</p>
+                    <small>توسط: علی | دسته: تکنولوژی</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- بخش ارسال تجربه -->
+        <section id="add-post" style="display:none;">
+            <h2>ارسال تجربه جدید</h2>
+            <form id="experience-form">
+                <input type="text" id="title" placeholder="عنوان تجربه" required>
+                <select id="category">
+                    <option value="تکنولوژی">تکنولوژی</option>
+                    <option value="تحصیل">تحصیل</option>
+                    <option value="سفر">سفر</option>
+                </select>
+                <textarea id="body" placeholder="متن تجربه خود را اینجا بنویسید..." rows="10" required></textarea>
+                <button type="submit">انتشار تجربه</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
