@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تجربات من</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- هدر -->
+    <header>
+        <h1>📚 تجربه‌های من</h1>
+        <p>جایی برای به اشتراک گذاشتن تجربه‌های زندگی</p>
+    </header>
+
+    <!-- دکمه‌های ناوبری -->
+    <nav>
+        <button onclick="showSection('home')">🏠 خانه</button>
+        <button onclick="showSection('add-post')">✍️ افزودن تجربه</button>
+    </nav>
+
+    <!-- صفحه اصلی -->
+    <section id="home">
+        <h2>تازه‌ترین تجربه‌ها</h2>
+        <div id="posts-container"></div>
+    </section>
+
+    <!-- فرم افزودن تجربه -->
+    <section id="add-post" style="display:none;">
+        <h2>افزودن تجربه جدید</h2>
+        <form id="experience-form">
+            <input type="text" id="title" placeholder="عنوان تجربه" required>
+            <select id="category">
+                <option value="زندگی">زندگی</option>
+                <option value="کار">کار</option>
+                <option value="تحصیل">تحصیل</option>
+                <option value="سفر">سفر</option>
+                <option value="سایر">سایر</option>
+            </select>
+            <textarea id="body" placeholder="تجربه خود را بنویسید..." rows="6" required></textarea>
+            <button type="submit" class="submit-btn">📤 انتشار تجربه</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>ساخته شده با ❤️ برای به اشتراک گذاری تجربه‌ها</p>
+    </footer>
+
+    <!-- اتصال به Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>
